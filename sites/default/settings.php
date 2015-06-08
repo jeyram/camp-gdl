@@ -89,3 +89,4 @@ if (isset($_SERVER['PRESSFLOW_SETTINGS'])) {
  * Prevents fatal error https://github.com/pantheon-systems/drops-8/issues/23
 */
 $settings['container_yamls'][] = DRUPAL_ROOT . '/sites/development.services.yml';
+$settings['install_profile'] = 'standard';
