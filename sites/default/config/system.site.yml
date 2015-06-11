@@ -1,0 +1,12 @@
+uuid: 5dc8e672-0ab9-45bb-8e1d-2914b9e2c332
+name: 'DrupalCamp Guadalajara'
+mail: admin@admin.org
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
