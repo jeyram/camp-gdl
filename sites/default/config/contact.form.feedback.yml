@@ -3,8 +3,8 @@ langcode: en
 status: true
 dependencies: {  }
 id: feedback
-label: 'Website feedback'
+label: Contacto
 recipients:
-  - admin@admin.org
+  - info@drupalcamp.mx
 reply: ''
 weight: 0

@@ -1,24 +1,24 @@
-uuid: d257cf32-5459-4be1-a21f-31ea17167498
+uuid: 7b1c0e1c-7b22-4da7-ba01-1be27b0f2307
 langcode: en
 status: true
 dependencies:
   config:
-    - system.menu.tools
+    - system.menu.main
   module:
     - system
   theme:
     - bartik
-id: bartik_tools
+id: mainnavigation
 theme: bartik
 region: sidebar_first
-weight: -4
+weight: -6
 provider: null
-plugin: 'system_menu_block:tools'
+plugin: 'system_menu_block:main'
 settings:
-  id: 'system_menu_block:tools'
-  label: Tools
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
   provider: system
-  label_display: visible
+  label_display: '0'
   cache:
     max_age: -1
   level: 1
