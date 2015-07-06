@@ -1,0 +1,5 @@
+# Schema for the configuration files of the Drupal Camp Guadalajara theme.
+
+camp_gdl.settings:
+  type: theme_settings
+  label: 'Drupal Camp Guadalajara settings'
