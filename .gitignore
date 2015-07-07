@@ -1,38 +1,49 @@
-# This file contains default .gitignore rules. To use it, copy it to .gitignore,
-# and it will cause files like your settings.php and user-uploaded files to be
-# excluded from Git version control. This is a common strategy to avoid
-# accidentally including private information in public repositories and patch
-# files.
-#
-# Because .gitignore can be specific to your site, this file has a different
-# name; updating Drupal core will not override your custom .gitignore file.
-
-# Ignore core and vendor when managing dependencies with Composer.
-# core
-# vendor
-
-# Ignore configuration files that may contain sensitive information.
-sites/*/settings*.php
-sites/*/services*.yml
-
 # Ignore paths that contain user-generated content.
 sites/*/files
 sites/*/private
+files/*
+private/*
+cache
 
-# Ignore SimpleTest multi-site environment.
-sites/simpletest
+# Pantheon commits a settings.php for environment-specific settings.
+# Place local settings in settings.local.php
+sites/*/settings.local.php
 
-# If you prefer to store your .gitignore file in the sites/ folder, comment
-# or delete the previous settings and uncomment the following ones, instead.
+# ** Only works in OSs that support newer versions of fnmatch (Bash 4+)
+/sites/default/**/files
+/sites/default/**/private
 
-# Ignore configuration files that may contain sensitive information.
-# */settings*.php
+# Packages #
+############
+*.7z
+*.dmg
+*.gz
+*.bz2
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.tgz
 
-# Ignore paths that contain user-generated content.
-# */files
-# */private
+# Logs and databases #
+######################
+*.log
+*.sql
 
-# Ignore SimpleTest multi-site environment.
-# simpletest
-#
+# OS generated files #
+######################
+.DS_Store*
+ehthumbs.db
+Icon
+
+Thumbs.db
+._*
+
+# Vim generated files #
+######################
+*.un~
+
+# SASS #
+##########
 .sass-cache
