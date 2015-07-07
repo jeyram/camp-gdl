@@ -410,7 +410,7 @@ display:
           required: true
           entity_type: node
           entity_field: uid
-          plugin_id: standard
+          plugin_id: field
       arguments: {  }
       display_extenders: {  }
       use_more: true
@@ -424,6 +424,7 @@ display:
         - 'languages:language_interface'
         - user
         - 'user.node_grants:view'
+        - user.permissions
       cacheable: false
   block_1:
     display_plugin: block
@@ -438,4 +439,5 @@ display:
         - 'languages:language_interface'
         - user
         - 'user.node_grants:view'
+        - user.permissions
       cacheable: false

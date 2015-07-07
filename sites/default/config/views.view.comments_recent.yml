@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - comment
+    - node
     - user
 id: comments_recent
 label: 'Recent comments'
@@ -59,7 +60,7 @@ display:
           id: node
           table: comment_field_data
           required: true
-          plugin_id: standard
+          plugin_id: field
       fields:
         subject:
           id: subject
@@ -175,24 +176,26 @@ display:
           table: comment_field_data
           field: status
           id: status
-          plugin_id: boolean
+          plugin_id: field
           expose:
             operator: ''
           group: 1
           entity_type: comment
           entity_field: status
+          type: boolean
         status_node:
           value: true
           table: node_field_data
           field: status
           relationship: node
           id: status_node
-          plugin_id: boolean
+          plugin_id: field
           expose:
             operator: ''
           group: 1
           entity_type: node
           entity_field: status
+          type: boolean
       sorts:
         created:
           id: created
@@ -239,6 +242,7 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - user.permissions
       cacheable: false
   block_1:
     display_plugin: block
@@ -255,4 +259,5 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - user.permissions
       cacheable: false

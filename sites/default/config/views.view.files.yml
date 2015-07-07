@@ -557,15 +557,10 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          set_precision: false
-          precision: 0
-          decimal: .
-          separator: ','
-          format_plural: true
-          format_plural_string: "1 place\x03@count places"
-          prefix: ''
-          suffix: ''
-          plugin_id: numeric
+          plugin_id: field
+          type: number_integer
+          settings:
+            thousand_separator: ','
       filters:
         filename:
           id: filename
@@ -685,9 +680,14 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          plugin_id: file_status
+          plugin_id: field
           entity_type: file
           entity_field: status
+          type: boolean
+          settings:
+            format: custom
+            format_custom_false: Temporary
+            format_custom_true: Permanent
       sorts: {  }
       title: Files
       header: {  }
@@ -721,6 +721,7 @@ display:
         - 'url.query_args.pagers:0'
         - 'url.query_args:order'
         - 'url.query_args:sort'
+        - user.permissions
       cacheable: false
   page_1:
     display_plugin: page
@@ -758,6 +759,7 @@ display:
         - 'url.query_args.pagers:0'
         - 'url.query_args:order'
         - 'url.query_args:sort'
+        - user.permissions
       cacheable: false
   page_2:
     display_plugin: page
@@ -901,7 +903,7 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          plugin_id: standard
+          plugin_id: field
         module:
           id: module
           table: file_usage
@@ -950,7 +952,7 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          plugin_id: standard
+          plugin_id: field
         count:
           id: count
           table: file_usage
@@ -999,15 +1001,10 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          set_precision: false
-          precision: 0
-          decimal: .
-          separator: ','
-          format_plural: false
-          format_plural_string: "1\x03@count"
-          prefix: ''
-          suffix: ''
-          plugin_id: numeric
+          plugin_id: field
+          type: number_integer
+          settings:
+            thousand_separator: ','
       group_by: false
       title: 'File usage'
       arguments:
@@ -1115,4 +1112,5 @@ display:
         - 'url.query_args.pagers:0'
         - 'url.query_args:order'
         - 'url.query_args:sort'
+        - user.permissions
       cacheable: false

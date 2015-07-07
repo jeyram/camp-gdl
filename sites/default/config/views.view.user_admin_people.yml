@@ -739,9 +739,10 @@ display:
                 title: Blocked
                 operator: '='
                 value: '0'
-          plugin_id: boolean
+          plugin_id: field
           entity_type: user
           entity_field: status
+          type: boolean
         uid_raw:
           id: uid_raw
           table: users_field_data
@@ -780,8 +781,9 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          plugin_id: numeric
+          plugin_id: field
           entity_type: user
+          type: number_integer
       sorts:
         created:
           id: created
@@ -835,6 +837,7 @@ display:
         - 'url.query_args.pagers:0'
         - 'url.query_args:order'
         - 'url.query_args:sort'
+        - user.permissions
       cacheable: false
   page_1:
     display_plugin: page
@@ -868,4 +871,5 @@ display:
         - 'url.query_args.pagers:0'
         - 'url.query_args:order'
         - 'url.query_args:sort'
+        - user.permissions
       cacheable: false

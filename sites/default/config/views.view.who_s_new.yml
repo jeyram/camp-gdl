@@ -97,9 +97,10 @@ display:
           expose:
             operator: '0'
           group: 1
-          plugin_id: boolean
+          plugin_id: field
           entity_type: user
           entity_field: status
+          type: boolean
         access:
           id: access
           table: users_field_data
@@ -169,6 +170,7 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - user.permissions
       cacheable: false
   block_1:
     display_plugin: block
@@ -184,4 +186,5 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - user.permissions
       cacheable: false

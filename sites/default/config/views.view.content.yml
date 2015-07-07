@@ -404,9 +404,10 @@ display:
                 title: Unpublished
                 operator: '='
                 value: '0'
-          plugin_id: boolean
+          plugin_id: field
           entity_type: node
           entity_field: status
+          type: boolean
         type:
           id: type
           table: node_field_data
@@ -547,7 +548,7 @@ display:
           field: uid
           admin_label: author
           required: true
-          plugin_id: standard
+          plugin_id: field
       show_admin_links: false
       filter_groups:
         operator: AND
@@ -568,6 +569,7 @@ display:
         - 'url.query_args:sort'
         - user
         - 'user.node_grants:view'
+        - user.permissions
       cacheable: false
   page_1:
     display_options:
@@ -600,4 +602,5 @@ display:
         - 'url.query_args:sort'
         - user
         - 'user.node_grants:view'
+        - user.permissions
       cacheable: false

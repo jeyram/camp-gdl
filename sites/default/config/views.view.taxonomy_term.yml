@@ -72,7 +72,7 @@ display:
           table: taxonomy_index
           field: sticky
           order: DESC
-          plugin_id: standard
+          plugin_id: field
           relationship: none
           group_type: group
           admin_label: ''
@@ -210,7 +210,8 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          plugin_id: boolean
+          plugin_id: field
+          type: boolean
       style:
         type: default
         options:
@@ -249,6 +250,7 @@ display:
         - url
         - 'url.query_args.pagers:0'
         - 'user.node_grants:view'
+        - user.permissions
       cacheable: false
   feed_1:
     id: feed_1
@@ -285,6 +287,7 @@ display:
         - 'languages:language_interface'
         - url
         - 'user.node_grants:view'
+        - user.permissions
       cacheable: false
   page_1:
     id: page_1
@@ -303,4 +306,5 @@ display:
         - url
         - 'url.query_args.pagers:0'
         - 'user.node_grants:view'
+        - user.permissions
       cacheable: false

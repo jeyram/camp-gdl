@@ -2,8 +2,11 @@ uuid: 62f0053b-6a12-49f2-a300-c83fa139a4c2
 langcode: en
 status: false
 dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
   module:
     - node
+    - user
 id: archive
 label: Archive
 module: node
@@ -108,9 +111,10 @@ display:
           group: 0
           expose:
             operator: '0'
-          plugin_id: boolean
+          plugin_id: field
           entity_type: node
           entity_field: status
+          type: boolean
         langcode:
           id: langcode
           table: node_field_data
@@ -174,6 +178,7 @@ display:
         - url
         - 'url.query_args.pagers:0'
         - 'user.node_grants:view'
+        - user.permissions
       cacheable: false
   block_1:
     id: block_1
@@ -211,6 +216,7 @@ display:
         - url
         - 'url.query_args.pagers:0'
         - 'user.node_grants:view'
+        - user.permissions
       cacheable: false
   page_1:
     id: page_1
@@ -229,4 +235,5 @@ display:
         - url
         - 'url.query_args.pagers:0'
         - 'user.node_grants:view'
+        - user.permissions
       cacheable: false
