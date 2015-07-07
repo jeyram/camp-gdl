@@ -2,6 +2,9 @@ uuid: 80e3c216-fdb7-4a29-8e00-a107f41bc9ea
 langcode: en
 status: true
 dependencies:
+  config:
+    - core.entity_view_mode.node.rss
+    - core.entity_view_mode.node.teaser
   module:
     - node
     - user
@@ -104,9 +107,10 @@ display:
           relationship: none
           table: node_field_data
           value: true
-          plugin_id: boolean
+          plugin_id: field
           entity_type: node
           entity_field: promote
+          type: boolean
         status:
           expose:
             operator: ''
@@ -115,9 +119,10 @@ display:
           id: status
           table: node_field_data
           value: true
-          plugin_id: boolean
+          plugin_id: field
           entity_type: node
           entity_field: status
+          type: boolean
         langcode:
           id: langcode
           table: node_field_data
@@ -203,9 +208,10 @@ display:
           order: DESC
           relationship: none
           table: node_field_data
-          plugin_id: boolean
+          plugin_id: field
           entity_type: node
           entity_field: sticky
+          type: boolean
         created:
           field: created
           id: created
@@ -244,6 +250,7 @@ display:
         - 'languages:language_interface'
         - 'url.query_args.pagers:0'
         - 'user.node_grants:view'
+        - user.permissions
       cacheable: false
   feed_1:
     display_plugin: feed
@@ -277,6 +284,7 @@ display:
       contexts:
         - 'languages:language_interface'
         - 'user.node_grants:view'
+        - user.permissions
       cacheable: false
   page_1:
     display_options:
@@ -291,4 +299,5 @@ display:
         - 'languages:language_interface'
         - 'url.query_args.pagers:0'
         - 'user.node_grants:view'
+        - user.permissions
       cacheable: false

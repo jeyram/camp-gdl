@@ -364,13 +364,14 @@ display:
           value: true
           table: node_field_data
           field: status
-          plugin_id: boolean
+          plugin_id: field
           entity_type: node
           entity_field: status
           id: status
           expose:
             operator: ''
           group: 1
+          type: boolean
         type:
           id: type
           table: node_field_data
@@ -449,6 +450,7 @@ display:
         - url
         - 'url.query_args.pagers:0'
         - 'user.node_grants:view'
+        - user.permissions
       cacheable: false
   attachment_1:
     display_plugin: attachment
@@ -508,6 +510,7 @@ display:
         - 'languages:language_interface'
         - url
         - 'user.node_grants:view'
+        - user.permissions
       cacheable: false
   page_1:
     display_plugin: page
@@ -544,4 +547,5 @@ display:
         - url
         - 'url.query_args.pagers:0'
         - 'user.node_grants:view'
+        - user.permissions
       cacheable: false
