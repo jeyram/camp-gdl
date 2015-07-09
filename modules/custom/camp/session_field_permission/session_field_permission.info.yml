@@ -1,0 +1,6 @@
+name: Session Field Permission
+type: module
+description: Module to alter permission of field status on sessions
+core: 8.x
+package: Camp
+
