@@ -1,0 +1,10 @@
+{
+  "name": "drupal/ld",
+  "description": "Integrates the ladybug library into Drupal",
+  "type": "drupal-module",
+  "require": {
+    "raulfraile/ladybug": "~1.0",
+    "phpdocumentor/reflection-docblock": "~2.0",
+    "jms/serializer" : "*"
+  }
+}
