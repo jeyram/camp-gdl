@@ -44,6 +44,7 @@ class Inspector {
     // Setting the 'extra_helpers' option here, prior to instantiating our
     // Ladybug, will pass it to the internal Application at runtime.
     $this->ladybug->setOptions(array('extra_helpers' => $our_helpers));
+    $this->ladybug->setTheme('modern');
   }
 
   /**
@@ -71,7 +72,7 @@ class Inspector {
     if (\Drupal::currentUser()->hasPermission('access devel information')) {
 
       $export = $this->dump($input, $name);
-      drupal_set_message($export, $type, TRUE);
+      drupal_set_message(t($export), $type, TRUE);
     }
   }
 
