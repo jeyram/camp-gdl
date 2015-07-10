@@ -1,10 +1,8 @@
 {
   "name": "drupal/ld",
-  "description": "Integrates the ladybug library into Drupal",
+  "description": "Provides Ladybug PHP Dumper integration into Drupal",
   "type": "drupal-module",
   "require": {
-    "raulfraile/ladybug": "~1.0",
-    "phpdocumentor/reflection-docblock": "~2.0",
-    "jms/serializer" : "*"
+    "raulfraile/ladybug": "~1.0"
   }
 }

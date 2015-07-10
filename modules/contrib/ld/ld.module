@@ -7,12 +7,12 @@
 /**
  * Return a Dumper.
  *
- * @return \Drupal\ld\Inspector
+ * @return Drupal\ld\Inspector
  *   The dumper.
  */
 function ld_inspect() {
 
-  return \Drupal\ld\Inspector::init();
+  return Drupal\ld\Inspector::init();
 }
 
 /**
