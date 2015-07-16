@@ -6,9 +6,6 @@
  */
 
 function session_field_permission_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id){
-   //ladybug_set_theme('modern');
-  // ladybug_dump($form);
-  ldpm($form);
   $user = \Drupal::currentUser();
   if(!$user->hasPermission('access session status field')){
     $form['field_status']['#access']= false;
