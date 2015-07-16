@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * Contains session_field_permission.module.
+ */
+
+function session_field_permission_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id){
+  $user = \Drupal::currentUser();
+  if(!$user->hasPermission('access session status field')){
+    $form['field_status']['#access']= false;
+  }
+}

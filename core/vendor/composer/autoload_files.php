@@ -7,5 +7,6 @@ $baseDir = dirname($vendorDir);
 
 return array(
     $vendorDir . '/react/promise/src/functions_include.php',
+    $vendorDir . '/raulfraile/ladybug-themes/Ladybug/Plugin/Extra/Resources/php/helpers.php',
     $baseDir . '/lib/Drupal.php',
 );
