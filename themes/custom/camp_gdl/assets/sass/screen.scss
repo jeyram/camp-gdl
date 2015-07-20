@@ -2,11 +2,13 @@
 // SASS partials import
 // --------------------------------------------------
 @import "compass";
+@import "compass/reset";
 
 // Mixins and Variables
 // --------------------------------------------------
 @import "global/variable";
 @import "global/mixin";
+@import "global/settings";
 @import "global/helper";
 
 // Theme CSS
@@ -16,7 +18,6 @@
 @import "partials/structure";
 @import "partials/menu";
 @import "partials/page";
-@import "partials/panel";
 @import "partials/block";
 @import "partials/view";
 @import "partials/form";
