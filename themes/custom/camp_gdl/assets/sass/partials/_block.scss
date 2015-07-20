@@ -1,2 +1,67 @@
 // Styles for blocks.
 // --------------------------------------------------
+#block-views-block-speakers-block-1-2 {
+  h2 {
+    //@include gridle (3);
+    @include gridle_set((
+      grid : 12,
+      sm : (
+        grid : 3,
+        push : 0
+      )
+    ));
+  }
+  .views-element-container {
+
+    @include gridle_state( "sm" ) {
+      margin-top: -30px;
+    }
+    @include gridle_set((
+      grid : 12,
+      sm : (
+        grid : 9,
+        push : 0
+      )
+    ));
+    .view-speakers {
+      .item {
+        text-align: center;
+        @include gridle_set((
+          grid : 12,
+          sm : (
+            grid : 4,
+            push : 0
+          )
+        ));
+        .views-field-user-picture {
+          img {
+            width: 90%;
+            background: $white;
+            padding: 15px;
+            height: auto;
+            @include border_radius(50%);
+          }
+        }
+      }
+    }
+  }
+}
+
+#block-views-block-sponsors-block-1-2{
+  .view-content{
+    text-align: center;
+    h3 {
+      text-align: center;
+      @include gridle_set((
+        grid : 12,
+      ));
+    }
+    .item{
+      width: 25%;
+      text-align: center;
+      display: inline-table
+    }
+
+  }
+}
+

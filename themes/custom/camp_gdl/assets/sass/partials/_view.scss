@@ -1,2 +1,16 @@
 // Styles for Views
 // --------------------------------------------------
+.view-main-slider{
+  position: relative;
+  .water-mark-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    height: 100%;
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+}

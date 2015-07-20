@@ -7,29 +7,22 @@ base theme: classy
 
 stylesheets-remove:
   - '@classy/css/layout.css'
+  - core/modules/system/css/system.theme.css
+
 libraries:
   - camp_gdl/global-styling
 
 regions:
+  main_menu: 'Main menu'
+  user_menu: 'User menu'
   header: Header
-  primary_menu: 'Primary menu'
-  secondary_menu: 'Secondary menu'
   help: Help
-  page_top: 'Page top'
-  page_bottom: 'Page bottom'
   highlighted: Highlighted
-  featured_top: 'Featured top'
-  breadcrumb: Breadcrumb
+  content_top: 'Content Top'
   content: Content
+  content_bottom: 'Content Bottom'
   sidebar_first: 'Sidebar first'
   sidebar_second: 'Sidebar second'
-  featured_bottom_first: 'Featured bottom first'
-  featured_bottom_second: 'Featured bottom second'
-  featured_bottom_third: 'Featured bottom third'
-  footer_first: 'Footer first'
-  footer_second: 'Footer second'
-  footer_third: 'Footer third'
-  footer_fourth: 'Footer fourth'
-  footer_fifth: 'Footer fifth'
+  footer: Footer
 
 #Using Classy as a base theme https://www.drupal.org/theme-guide/8/classy

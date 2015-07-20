@@ -3,3 +3,25 @@ global-styling:
   css:
     theme:
       assets/stylesheets/screen.css: {}
+
+flex-nav:
+  version: VERSION
+  js:
+    assets/javascripts/vendor/flexNav/js/jquery.flexnav.min.js: {}
+    assets/javascripts/mainMenu.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+
+main-slider:
+  version: VERSION
+  css:
+    theme:
+      assets/javascripts/vendor/royalSlider/royalslider.css: {}
+      assets/javascripts/vendor/royalSlider/skins/default/rs-default.css: {}
+  js:
+    assets/javascripts/vendor/royalSlider/jquery.royalslider.min.js: {}
+    assets/javascripts/mainSlider.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery

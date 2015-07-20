@@ -7,3 +7,9 @@ services:
     class: Drupal\Core\Cache\MemoryBackendFactory
   cache.backend.null:
     class: Drupal\Core\Cache\NullBackendFactory
+
+parameters:
+  twig.config:
+    debug: false
+    auto_reload: false
+    cache: false

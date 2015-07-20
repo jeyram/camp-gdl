@@ -1,2 +1,52 @@
 // Styles for main layout
 // --------------------------------------------------
+body {
+  background: white;
+}
+
+h1 {
+  @include adjust-font-size-to($h1-fz);
+}
+
+h2 {
+  @include adjust-font-size-to($h2-fz);
+}
+
+h3 {
+  @include adjust-font-size-to($h3-fz);
+}
+
+h4 {
+  @include adjust-font-size-to($h4-fz);
+}
+
+h5 {
+  @include adjust-font-size-to($h5-fz);
+}
+
+h6 {
+  @include adjust-font-size-to($h6-fz);
+}
+
+a {
+  text-decoration: none;
+  @include link-colors($link-color, $link-hover-color, $link-color, $link-color, $link-color);
+}
+
+header{
+  img{
+    width: 100%;
+    height: auto;
+  }
+}
+[class*="grid-"] {
+  @include gridle_state(xs) {
+    width: 100%;
+  }
+}
+
+.container {
+  @include gridle_container ();
+  max-width: 1200px;
+  margin: 0 auto;
+}

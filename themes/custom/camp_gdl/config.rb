@@ -1,4 +1,5 @@
 require 'compass/import-once/activate'
+require 'gridle'
 # Require any additional compass plugins here.
 
 # Set environment [development, production]
